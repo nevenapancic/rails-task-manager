@@ -1,0 +1,9 @@
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= link_to post.title, post_path(post.id)%></li>
+  <%= link_to 'EDIT', edit_post_path(post) %>
+  <%= link_to 'DELETE', destroy_post_path(post),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+  <% end %>
+</ul>
+<%= link_to 'ADD', new_post_path %>

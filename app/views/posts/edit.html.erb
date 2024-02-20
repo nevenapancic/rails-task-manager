@@ -1,0 +1,10 @@
+<%= form_with model: @post do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :detailes %>
+  <%= form.text_field :detailes %>
+
+  <%= form.submit %>
+<% end %>
+<%= link_to 'GO BACK', posts_path %>
